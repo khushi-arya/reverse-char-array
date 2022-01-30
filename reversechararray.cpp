@@ -1,5 +1,19 @@
 #include <iostream>
 using namespace std;
+int palindrome(char arr[],int n){
+   int s=0;
+ int e=n-1;
+ while(s<e){
+ if(arr[s]!=arr[e]){
+    return 0;
+ }
+ else {
+    s++;
+    e--;
+ }
+ }
+ return 1;
+}
 void reverse(char arr[],int n)
 {
  int s=0;
@@ -24,5 +38,11 @@ char arr[]="khushi";
    int n=length(arr);
    reverse(arr,n);
     cout<<"\nreverse array is :  "<<arr;
+	int p= palindrome( arr, n);
+    if(p=0){
+       cout<<"array is not palindrome";
+    }else{
+       cout<<"array is palindrome";
+    }
 	return 0;
 }
